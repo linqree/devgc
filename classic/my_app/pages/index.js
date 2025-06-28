@@ -1,3 +1,12 @@
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+
 export default function Home() {
-  return <h1>Hello, Haru!</h1>;
+  const router = useRouter();
+
+  useEffect(() => {
+    router.replace('/classic/index.html'); 
+  }, [router]);
+
+  return null; // 
 }
